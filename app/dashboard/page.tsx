@@ -16,7 +16,7 @@ export default function Dashboard() {
   const [notes, setNotes] = useState<Note[]>([]);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [error, setError] = useState<string | null>(null);
+
 
   useEffect(() => {
     const fetchNotes = async () => {
@@ -118,7 +118,7 @@ export default function Dashboard() {
         <section>
           <h2 className="text-xl font-bold mb-6">Your Notes</h2>
           {notes.length === 0 ? (
-            <p className="text-gray-500">You haven't added any notes yet.</p>
+            <p className="text-gray-500">You haven&#39;t added any notes yet.</p>
           ) : (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {notes.map((note) => (
